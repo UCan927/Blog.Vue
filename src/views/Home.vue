@@ -97,6 +97,7 @@
                             <a href="https://github.com/anjoy8" target="_blank" class="iconfont icon-weixin" title="github"></a>
                         </li>
                     </ul>
+                    <p style="float: left;">过期时间：{{expDate}}</p>
                 </div>
                 <div class="whitebg notice">
                     <h2 class="htitle">网站公告</h2>
@@ -127,8 +128,10 @@
             <div class="box">
 
                 <div class="endnav">
-                    <p><b>免职声明：</b></p>
-                    <p>1、当前页设计样式模板来自网上资源，仅作学习参考，若商用请联系 [素材火]。</p>
+                   <div id="footer" style="text-align: center;">
+                      Copyright © 2018-2020 老张的哲学
+                      <br><span id="poweredby">Powered by VUE 2.6.10 on Docker &amp; CentOS 7.6 By Jenkins</span>
+                  </div>
                 </div>
             </div>
         </footer>
@@ -149,12 +152,16 @@ export default {
       TotalCount: 1,
       pictLoading: true,
       isShow: true,
-      list: []
+      list: [],
+      expDate: ""
     };
   },
-  created() {},
+  created() {
+    this.expDate = window.localStorage.getItem("USER_EXP") || "";
+  },
   mounted() {
     this.getData();
+    this.expDate = window.localStorage.getItem("USER_EXP") || "";
   },
   methods: {
     formatCreateTime: function(row) {

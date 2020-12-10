@@ -36,7 +36,7 @@ nav { width: 100%; height: auto; background: rgba(0,0,0,0.5); margin-top: 18px; 
 .menu:before { right: 20px; }
 /**/
 .box, article { width: 96% !important;}
-article { padding-top: 80px; }
+
 .lbox { width: 100% }
 .rbox {
  float: left;
@@ -116,4 +116,5 @@ a.viewmore { position: static; margin-top: 20px; text-align: center }
 .tab_buttons ul { width: 600px;overflow-x: scroll;}
 .tab_buttons li {margin-right: 30px;width: auto;}
 .newscurrent:after{width:100%}
+.header-container-banner{display: none !important}
 }
